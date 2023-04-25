@@ -1,0 +1,80 @@
+= Saison 3 Node.js et Express
+
+Module 01 - Introduction à NodeJS
+
+[background-color="#2ECC71"]
+== Objectifs
+
+* Comprendre ce qu'est Node.js
+* Savoir ce qu'est le moteur V8
+* Comprendre ce qu'est le contexte
+* Installer son environnement de développement
+
+== Node.js c'est quoi ?
+
+* Environnement d'exécution de JavaScript
+* Construit sur le moteur JS V8 de Chrome
+* Utilisé comme serveur pour application web
+* Utilisé pour des applications de bureau
+
+[NOTE.speaker]
+--
+En gros NodeJs est un environnement d'exécution de JavaScript : Permet d'exécuter du JS hors du navigateur
+--
+
+== FullStack
+
+image:./images/fullstackLanguage.drawio.png[]
+
+== Moteur V8
+
+* Le moteur V8 est le moteur JS de Google
+* Le moteur V8 est utilisé par Google Chrome
+* Le moteur V8 est utilisé par Node.Js
+
+== Contexte
+
+this
+
+[NOTE.speaker]
+--
+this est un objet qui représente votre contexte d'éxecution.
+--
+
+== Runtime
+
+moteur + contexte
+
+== Installation
+
+* Node.Js
+ ** npm
+
+[NOTE.speaker]
+--
+Choisir la version version LTS : Long Terms Support 
+npm est installé avec Node.Js
+
+node -v
+nodejs -v
+--
+
+[background-color="#F4D03F"]
+== Démonstration 01
+
+Mise en place de l'environnement de développement
+
+[background-color="#F0604D"]
+== Conclusion
+
+* Vous comprennez la place et le rôle d'un moteur JS
+* Vous connaissez le concept de runtime
+* Vous savez mettre en place votre environnement
+* Vous savez que le JS est un langage fullstack
+
+[background-color="#2ECC71"]
+== Les attendus
+
+* *Essentiel* : Tous les points abordés dans ce module.
+* *Attendu* : Tous les points abordés dans ce module.
+* *Avancé* : Tous les points abordés dans ce module.

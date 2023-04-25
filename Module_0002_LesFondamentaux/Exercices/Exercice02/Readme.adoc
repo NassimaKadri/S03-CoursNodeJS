@@ -1,0 +1,15 @@
+= Qui sont nos impairs
+
+== Niveau
+
+Débutant
+
+== Description
+
+Demandez à l'utilisateur deux valeurs permettant de définir l'intervalle pour laquelle le programme affichera les nombres paires.
+
+Limitez l'intervalle à 10000.
+
+Demandez à l'utilisateur une valeur permettant de définir l'intervalle entre 1 et la saisie pour laquelle le programme affichera les nombres paires.
+
+Limitez l'intervalle à 10000.

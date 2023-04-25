@@ -1,0 +1,208 @@
+= Saison 3 Node.js et Express
+
+Module 02 - Les fondamentaux
+
+[background-color="#2ECC71"]
+== Objectifs
+
+* Découvrir le mode REPL.
+* Découvrir la fonction require.
+* Découvrir le module Readline.
+
+== Le mode REPL de node
+
+Read-Eval-Print-Loop
+
+[NOTE.speaker]
+--
+Node.js est livré avec une Boucle de Lecture-Évaluation-Impression (Read-Eval-Print Loop), également connue sous le nom de REPL. C'est l'invite de commande interactif de Node.js ; tout JavaScript valide qui peut être écrit dans un script peut être passé au REPL. Il peut être extrêmement utile pour expérimenter avec Node.js, déboguer du code et comprendre certains des comportements les plus excentriques de JavaScript.
+
+Node.js dispose d'un REPL autonome accessible depuis la ligne de commande.
+--
+
+[background-color="#F4D03F"]
+== Démonstration 01
+
+REPL
+
+== Utilisation du terminal
+
+Exécution d'un fichier JS avec node via le terminal.
+
+[NOTE.speaker]
+--
+Le terminal permet de faire appel à node pour l'éxecution d'un fichier Js sur la machine hôte.
+--
+
+[background-color="#F4D03F"]
+== Démonstration 02
+
+Utiliser le terminal
+
+== La fonction require
+
+Permet d'importer des modules js
+
+Points d'attention : l'objet *exports*
+
+== La fonction require : Syntaxe
+
+[source,javascript]
+----
+const readline = require("readline")
+----
+
+== le module readline
+
+[source,javascript]
+----
+//require permet d'importer le module readline dans le programme
+//require est un synonyme de importer
+//On importe que ce dont on a besoin
+//readLine va me permettre de créer des objets pour communiquer avec l'exterieur
+//readline permet de lire des lignes, c'est a dire des chaines de caracteres saisies par l'utilisateur
+//readline permet aussi d'afficher des données dans la console.
+//readline est un module natif
+//c'est a dire que lorsque l'on a telechargé et installé node
+//readline faisait parti du package.
+//readline c'est un peu le prompt du navigateur
+const readline = require("readline")
+----
+
+
+[background-color="#F4D03F"]
+== Démonstration 03
+
+La fonction require
+
+== Documentation
+
+https://nodejs.org/
+
+[background-color="#F4D03F"]
+== Démonstration 04
+
+La documentation
+
+== Le module ReadLine
+
+Interagir avec un utilisateur via la console
+
+== Le module ReadLine : La syntaxe
+
+[source,javascript]
+----
+const readline = require("readline")
+
+const rl = readline.createInterface({
+    input: process.stdin, // ce que l'utilisateur tape
+    output: process.stdout // ce que l'utilisateur lit
+})
+
+const reponse = rl.question('Capitale de la Bretagne ?')
+
+console.log('Votre réponse est : ' + reponse)
+----
+
+== Le module ReadLine : Seconde syntaxe
+
+[source,javascript]
+----
+const readline = require("readline")
+
+const rl = readline.createInterface(process.stdin, process.stdout)
+
+rl.question("Pseudo ? ", (pseudo) => console.log("Hello : " + pseudo))
+----
+
+[background-color="#F4D03F"]
+== Démonstration 05
+
+Le module ReadLine
+
+== Le module ReadLine avec l'évènement line
+
+Une autre manière de faire.
+
+[NOTE.speaker]
+--
+L' 'line'événement est émis chaque fois que le inputflux reçoit une entrée de fin de ligne ( \n, \r, ou \r\n). Cela se produit généralement lorsque l'utilisateur appuie sur Enterou Return.
+
+L' 'line'événement est également émis si de nouvelles données ont été lues à partir d'un flux et que ce flux se termine sans marqueur final de fin de ligne.
+
+La fonction d'écoute est appelée avec une chaîne contenant la seule ligne d'entrée reçue.
+--
+
+== Le module ReadLine avec l'évènement line : La syntaxe
+
+[source,javascript]
+----
+rl.on('line', (input) => {
+  console.log(`Received: ${input}`);
+});
+----
+
+[background-color="#F4D03F"]
+== Démonstration 06
+
+Le module ReadLine avec l'événement line
+
+== Les fonctions traditionnelles
+
+[source,javascript]
+----
+function somme(v1,v2) {
+    return v1 + v2;
+}
+
+const resultat = somme(2,3)
+----
+
+== Les fonctions anonymes
+
+[source,javascript]
+----
+const somme = function (v1,v2) {
+    return v1 + v2;
+}
+
+const resultat = somme(2,3)
+----
+
+== Les fonctions 'fléchées'
+
+[source,javascript]
+----
+const somme = (v1,v2) => v1 + v2;
+
+const resultat = somme(2,3)
+----
+
+[background-color="#F4D03F"]
+== Démonstration 07
+
+Les fonctions fléchées.
+
+== Client/Serveur
+
+Fonctionnement similaire à Readline.
+
+[NOTE.speaker]
+--
+Readline : Quand il y a une ligne on renvoit une reponse.
+Http     : Quand il y a une requête on renvoit une reponse.
+--
+
+[background-color="#F0604D"]
+== Conclusion
+
+* Vous avez découvert le mode REPL.
+* Vous avez la fonction require.
+* Vous avez découvert le module Readline
+
+[background-color="#2ECC71"]
+== Les attendus
+
+* *Essentiel* : Tous les points abordés dans ce module sauf les évènements.
+* *Attendu* : Tous les points abordés dans ce module.
+* *Avancé* : Tous les points abordés dans ce module et comprendre le fonctionnement avec http.

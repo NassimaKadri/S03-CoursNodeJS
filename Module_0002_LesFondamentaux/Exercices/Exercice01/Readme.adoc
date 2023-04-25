@@ -1,0 +1,28 @@
+= Qui sont nos pairs
+
+== Niveau
+
+Débutant
+
+== Description
+
+Demandez à l'utilisateur une valeur permettant de définir l'intervalle entre 1 et la saisie pour laquelle le programme affichera les nombres paires.
+
+Limitez l'intervalle à 10000.
+
+== Deroulement
+
+> Veuillez saisir une valeur
+> 20
+> Voici les nombres pairs entre 1 et 20 :
+> 2
+> 4
+> 6
+> 8
+> 10
+> 12
+> 14
+> 16
+> 18
+> 20
+
